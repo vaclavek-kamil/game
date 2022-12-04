@@ -15,7 +15,7 @@ class Game:
 
         #define instances here
         self.player = Player()
-        self.bullet = Bullet()
+        self.map = pg.image.load('art/map/map.png')
 
     def new_game(self):
         pass
@@ -28,7 +28,7 @@ class Game:
         self.player.update(game)
 
     def draw(self):
-        self.screen.fill('black')
+        self.screen.blit(self.map, (0,0))
         self.player.draw(game)
 
     def check_events(self):
